@@ -38,5 +38,10 @@ body {
   background:#477CA7;
   border:none;
   font-size:22px;
+  width:50%;
+  margin:5px;
+}
+.btncont{
+  display:flex;
 }
 

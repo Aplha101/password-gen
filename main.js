@@ -1,11 +1,10 @@
 const btn = document.getElementById("btn")
 const p = document.getElementById("pass")
-const cpy = document.getElementById("cpy")
 function generateRandom(Array) {
   let random = Math.floor(Math.random() * Array.length)
   return Array[random]
 }
-
+let prev = []
 function genPassword() {
   let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^%@$#&*&^$&%&^#@5&*ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let passwordLength = 12;
@@ -14,5 +13,16 @@ function genPassword() {
     let randomNumber = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomNumber, randomNumber + 1);
   }
+  prev.push(password)
   p.textContent = password
+}
+
+function viewprev(){
+  for(let i = 0;i <= prev.length;i++){
+    return prev[i]
+  }
+}
+
+function cpy(){
+navigator.clipboard.writeText(prev[prev.length - 1])
 }

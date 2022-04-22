@@ -5,6 +5,7 @@ function generateRandom(Array) {
   return Array[random]
 }
 let prev = []
+
 function genPassword() {
   let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^%@$#&*&^$&%&^#@5&*ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let passwordLength = 12;
@@ -17,11 +18,7 @@ function genPassword() {
   p.textContent = password
 }
 
-function viewprev(){
-  for(let i = 0;i <= prev.length;i++){
-    return prev[i]
-  }
-}
+
 
 function cpy(){
 navigator.clipboard.writeText(prev[prev.length - 1])
